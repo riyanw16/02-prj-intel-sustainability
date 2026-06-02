@@ -169,74 +169,80 @@ select {
   background-color: #005bb5;
 }
 
-.timeline-scroll {
-  position: relative;
-  z-index: 1;
+.timeline {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
-/* timeline line behind everything */
-.timeline-scroll::before {
-  content: "";
-  position: absolute;
-  left: 20px;
-  top: 0;
-  width: 3px;
-  height: 100%;
-  background: #0071e3;
-  opacity: 0.25;
-  z-index: 0;
-}
-
-/* each card ABOVE the line */
-.timeline-item {
-  position: relative;
-  padding-left: 60px;
-  z-index: 2;
-}
-
-/* ensure cards are never hidden */
-.card {
-  position: relative;
-  z-index: 2;
-}
-
-.card-body h2 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.card-body p {
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-.rtl {
-  text-align: right;
-}
-
-.rtl .timeline-item {
-  padding-left: 0;
-  padding-right: 60px;
-}
-
-.rtl .timeline-scroll::before {
-  left: auto;
-  right: 20px;
-}
-
-.timeline-scroll .card {
-  max-width: 750px;
-  margin: 0 auto;
-  border-radius: 10px;
-}
-.card-img-bottom {
-  max-height: 180px;
+/* image */
+.timeline-item img {
+  width: 100%;
+  height: 220px;
   object-fit: cover;
+  display: block;
 }
 
-.timeline-scroll {
-  max-width: 900px;
-  margin: 0 auto;
+/* text container spacing */
+.timeline-item h2,
+.timeline-item h3,
+.timeline-item p {
+  margin: 0.5rem 1rem;
+  position: relative;
+  z-index: 2;
+  color: #222;
+}
+
+
+/* DESCRIPTION hidden until hover */
+.timeline-item p {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* SHOW text on hover */
+.timeline-item:hover p {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.timeline-item:hover {
+  transform: translateY(-6px);
+}
+
+.timeline-item p {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover p {
+  max-height: 200px;
+  opacity: 1;
+}
+
+/* keep text ABOVE overlay ALWAYS */
+.timeline-item {
+  flex: 0 0 350px;   /* IMPORTANT: keeps horizontal scroll */
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  scroll-snap-align: start;
+  transition: transform 0.25s ease;
+}
+}
+
+/* hover lift */
+.timeline-item:hover {
+  transform: translateY(-6px);
 }
 
 .feature-card {
