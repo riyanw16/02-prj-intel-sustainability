@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
@@ -25,8 +27,13 @@
           <option value="en">English</option>
           <option value="es">Español</option>
         </select>
-      </nav>
 
+        <!-- POPUP (correct placement) -->
+        <div id="lang-popup" class="lang-popup">
+          🌐 Use this to change language
+          <button id="close-popup">✕</button>
+        </div>
+      </nav>
 
       <!-- Main Heading -->
       <h1 id="title" style="font-size: 50px;">
@@ -44,209 +51,368 @@
     </div>
   </header>
 
-  <!-- Timeline Cards Section -->
-  <section class="timeline" aria-label="Intel sustainability timeline">
+  <section class="container py-5 timeline-scroll" aria-label="Intel sustainability timeline">
 
-    <!-- Card 1: 1968 -->
-    <article class="timeline-item" tabindex="0">
-      <h2>1968</h2>
-      <h3 id="t1-title">Intel Founded</h3>
-      <p id="t1-desc">
-        Robert Noyce and Gordon Moore rename the newly formed company
-        NM Electronics to Intel Corporation, laying the foundation for
-        decades of technological innovation.
-      </p>
-      <img src="img/1.jpg" alt="Intel 1968" />
-    </article>
+    <!-- 1 -->
+    <div class="timeline-item mb-5">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="h5"><i class="bi bi-building"></i> <span id="t1-title">Intel Founded</span></h2>
+          <p id="t1-desc">
+            Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying
+            the foundation for decades of technological innovation.
+          </p>
+          <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#timelineModal"
+            onclick="openModal(1)">
+            Learn More
+          </a>
+           <img src="img/1.jpg" class="card-img-bottom" alt="Intel 1971">
+        </div>
+      </div>
 
-    <!-- Card 2: 1971 -->
-    <article class="timeline-item" tabindex="0">
-      <h2>1971</h2>
-      <h3 id="t2-title">First Microprocessor</h3>
-      <p id="t2-desc">
-        Intel debuts the 4004, the world's first commercial microprocessor,
-        igniting the microprocessor revolution and propelling the future
-        of computing devices.
-      </p>
-      <img src="img/2.jpg" alt="Intel 1971" />
-    </article>
+      <!-- 2 -->
+      <div class="timeline-item mb-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="h5"><i class="bi bi-cpu"></i> <span id="t2-title">First Microprocessor</span></h2>
+            <p id="t2-desc">
+              Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution
+              and propelling the future of computing devices.
+            </p>
+            <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#timelineModal"
+              onclick="openModal(2)">
+              Learn More
+            </a>
+          </div>
+          <img src="img/2.jpg" class="card-img-bottom" alt="Intel 1971">
+        </div>
+      </div>
 
-    <!-- Card 3: 1978 -->
-    <article class="timeline-item" tabindex="0">
-      <h2>1978</h2>
-      <h3 id="t3-title">8086 Processor</h3>
-      <p id="t3-desc">
-        Launch of the 8086 processor, establishing the x86 architecture
-        that drives countless PCs and servers in the modern era.
-      </p>
-      <img src="img/3.jpg" alt="Intel 1978" />
-    </article>
+      <!-- 3 -->
+      <div class="timeline-item mb-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="h5"><i class="bi bi-lightning-charge"></i> <span id="t3-title">8086 Processor</span></h2>
+            <p id="t3-desc">
+              Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in
+              the
+              modern era.
+            </p>
+            <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#timelineModal"
+              onclick="openModal(3)">
+              Learn More
+            </a>
+          </div>
+          <img src="img/3.jpg" class="card-img-bottom" alt="Intel 1978">
+        </div>
+      </div>
 
-    <!-- Card 4: 1985 -->
-    <article class="timeline-item" tabindex="0">
-      <h2>1985</h2>
-      <h3 id="t4-title">386 Processor</h3>
-      <p id="t4-desc">
-        Intel introduces the 386 processor with 32-bit architecture,
-        ushering in a new era of performance and multitasking for
-        personal computers.
-      </p>
-      <img src="img/4.jpg" alt="Intel 1985" />
-    </article>
+      <!-- 4 -->
+      <div class="timeline-item mb-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="h5"><i class="bi bi-cpu-fill"></i> <span id="t4-title">386 Processor</span></h2>
+            <p id="t4-desc">
+              Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and
+              multitasking for personal computers.
+            </p>
+           <a class="btn btn-primary w-100"
+   data-bs-toggle="modal"
+   data-bs-target="#timelineModal"
+   onclick="openModal(4)">
+  Learn More
+</a>
+      </div>
 
-    <!-- Card 5: 2006 -->
-    <article class="timeline-item" tabindex="0">
-      <h2>2006</h2>
-      <h3 id="t5-title">Peak GHG Emissions</h3>
-      <p id="t5-desc">
-        This year marks Intel's highest annual greenhouse gas emissions
-        for operations. Over subsequent years, Intel invests heavily in
-        chemical abatement, renewable energy, and energy-efficient
-        manufacturing to reverse this trend.
-      </p>
-      <img src="img/5.jpg" alt="Intel 2006" />
-    </article>
+      <!-- 5 -->
+      <div class="timeline-item mb-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="h5"><i class="bi bi-exclamation-triangle"></i> <span id="t5-title">Peak GHG Emissions</span></h2>
+            <p id="t5-desc">
+              This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years,
+              Intel
+              invests heavily in chemical abatement and renewable energy.
+            </p>
+            <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#timelineModal"
+              onclick="openModal(5)">
+              Learn More
+            </a>
+          </div>
+          <img src="img/5.jpg" class="card-img-bottom" alt="Intel 2006">
+        </div>
+      </div>
 
-    <!-- Card 6: 2020 -->
-    <article class="timeline-item" tabindex="0">
-      <h2>2020</h2>
-      <h3 id="t6-title">RISE Strategy</h3>
-      <p id="t6-desc">
-        Intel launches its RISE (Responsible, Inclusive, Sustainable,
-        Enabling) strategy and 2030 goals, aiming to drive industry-wide
-        progress on climate action, water stewardship, and waste reduction.
-      </p>
-      <img src="img/11.jpg" alt="Intel 2020" />
-    </article>
+      <!-- 6 -->
+      <div class="timeline-item mb-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="h5"><i class="bi bi-globe"></i> <span id="t6-title">RISE Strategy</span></h2>
+            <p id="t6-desc">
+              Intel launches its RISE strategy focused on Responsible, Inclusive, Sustainable, and Enabling innovation
+              across the industry.
+            </p>
+            <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#timelineModal"
+              onclick="openModal(6)">
+              Learn More
+            </a>
+          </div>
+          <img src="img/11.jpg" class="card-img-bottom" alt="Intel 2020">
+        </div>
+      </div>
 
-    <!-- Card 7: 2022 -->
-    <article class="timeline-item" tabindex="0">
-      <h2>2022</h2>
-      <h3 id="t7-title">Net-Zero By 2040</h3>
-      <p id="t7-desc">
-        Intel announces its commitment to achieve net-zero greenhouse
-        gas emissions (Scope 1 and 2) across its global operations
-        by 2040, building on years of environmental initiatives.
-      </p>
-      <img src="img/7.png" alt="Intel 2022" />
-    </article>
+      <!-- 7 -->
+      <div class="timeline-item mb-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="h5"><i class="bi bi-flag"></i> <span id="t7-title">Net-Zero By 2040</span></h2>
+            <p id="t7-desc">
+              Intel commits to achieving net-zero greenhouse gas emissions across global operations by 2040.
+            </p>
+            <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#timelineModal"
+              onclick="openModal(7)">
+              Learn More
+            </a>
+          </div>
+          <img src="img/7.png" class="card-img-bottom" alt="Intel 2022">
+        </div>
+      </div>
 
-    <!-- Card 8: 2023 -->
-    <article class="timeline-item" tabindex="0">
-      <h2>2023</h2>
-      <h3 id="t8-title">Renewable Electricity</h3>
-      <p id="t8-desc">
-        The company achieves 99% renewable electricity usage worldwide,
-        helping to drastically lower carbon emissions and driving progress
-        toward Intel's long-term sustainability goals.
-      </p>
-      <img src="img/8.png" alt="Intel 2023" />
-    </article>
+      <!-- 8 -->
+      <div class="timeline-item mb-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="h5"><i class="bi bi-lightning"></i> <span id="t8-title">Renewable Electricity</span></h2>
+            <p id="t8-desc">
+              Intel achieves 99% renewable electricity usage worldwide, significantly reducing carbon emissions.
+            </p>
+            <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#timelineModal"
+              onclick="openModal(8)">
+              Learn More
+            </a>
+          </div>
+          <img src="img/8.png" class="card-img-bottom" alt="Intel 2023">
+        </div>
+      </div>
 
-    <!-- Card 9: 2024 -->
-    <article class="timeline-item" tabindex="0">
-      <h2>2024</h2>
-      <h3 id="t9-title">Sustainability Summit</h3>
-      <p id="t9-desc">
-        Intel hosts its first Sustainability Summit, uniting suppliers,
-        government officials, and industry leaders to collaborate on
-        next-generation sustainable semiconductor manufacturing.
-      </p>
-      <img src="img/9.png" alt="Intel 2024" />
-    </article>
+      <!-- 9 -->
+      <div class="timeline-item mb-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="h5"><i class="bi bi-people"></i> <span id="t9-title">Sustainability Summit</span></h2>
+            <p id="t9-desc">
+              Intel hosts its first Sustainability Summit, bringing together global leaders to advance sustainable
+              semiconductor manufacturing.
+            </p>
+            <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#timelineModal"
+              onclick="openModal(9)">
+              Learn More
+            </a>
+          </div>
+          <img src="img/9.png" class="card-img-bottom" alt="Intel 2024">
+        </div>
+      </div>
+
   </section>
-  <p>Scroll to view timeline | Hover over cards to learn more!</p>
+  </div>
+  </section>
+
+
+  <footer class="subscribe-bar">
+    <form class="subscribe-form">
+      <label for="email" class="sr-only">Email</label>
+
+      <input type="email" id="email" placeholder="Enter your email for updates" required />
+
+      <button type="submit">Subscribe</button>
+    </form>
+  </footer>
 
   <script>
-    const translations = {
-      en: {
-        title: "Sustainability Through the Ages",
-        intro: "Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.",
-
-        t1_title: "Intel Founded",
-        t1_desc: "Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.",
-
-        t2_title: "First Microprocessor",
-        t2_desc: "Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.",
-
-        t3_title: "8086 Processor",
-        t3_desc: "Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.",
-
-        t4_title: "386 Processor",
-        t4_desc: "Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers.",
-
-        t5_title: "Peak GHG Emissions",
-        t5_desc: "This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.",
-
-        t6_title: "RISE Strategy",
-        t6_desc: "Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.",
-
-        t7_title: "Net-Zero By 2040",
-        t7_desc: "Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040.",
-
-        t8_title: "Renewable Electricity",
-        t8_desc: "The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions.",
-
-        t9_title: "Sustainability Summit",
-        t9_desc: "Intel hosts its first Sustainability Summit, uniting suppliers and industry leaders to collaborate on sustainable semiconductor manufacturing."
-      },
-
-      es: {
-        title: "Sostenibilidad a Través del Tiempo",
-        intro: "Explora el recorrido de Intel a través del tiempo y descubre cómo nuestro compromiso con la innovación ha creado un futuro más sostenible para la tecnología y el planeta.",
-
-        t1_title: "Fundación de Intel",
-        t1_desc: "Robert Noyce y Gordon Moore renombraron la empresa NM Electronics como Intel Corporation.",
-
-        t2_title: "Primer Microprocesador",
-        t2_desc: "Intel presenta el 4004, el primer microprocesador comercial del mundo.",
-
-        t3_title: "Procesador 8086",
-        t3_desc: "Lanzamiento del procesador 8086, estableciendo la arquitectura x86.",
-
-        t4_title: "Procesador 386",
-        t4_desc: "Intel introduce el procesador 386 con arquitectura de 32 bits.",
-
-        t5_title: "Emisiones Máximas de GEI",
-        t5_desc: "Este año marca las emisiones más altas de Intel, seguido de inversiones en sostenibilidad.",
-
-        t6_title: "Estrategia RISE",
-        t6_desc: "Intel lanza su estrategia RISE enfocada en sostenibilidad e inclusión.",
-
-        t7_title: "Cero Neto para 2040",
-        t7_desc: "Intel se compromete a emisiones netas cero para 2040.",
-
-        t8_title: "Electricidad Renovable",
-        t8_desc: "Intel alcanza 99% de electricidad renovable a nivel global.",
-
-        t9_title: "Seminario de Sostenibilidad",
-        t9_desc: "Intel organiza su primer seminario global de sostenibilidad."
-      }
-    };
-
-    document.getElementById("language-select").addEventListener("change", function () {
-      const lang = this.value;
-
-      // Header
-      document.getElementById("title").textContent = translations[lang].title;
-      document.getElementById("intro").textContent = translations[lang].intro;
-
-      // Timeline cards (ALL 9 NOW WORK)
-      for (let i = 1; i <= 9; i++) {
-        const title = document.getElementById(`t${i}-title`);
-        const desc = document.getElementById(`t${i}-desc`);
-
-        if (title) title.textContent = translations[lang][`t${i}_title`];
-        if (desc) desc.textContent = translations[lang][`t${i}_desc`];
-      }
-
-      document.documentElement.lang = lang;
-    });
+    // your JS stays the same
   </script>
 
 </body>
 
 </html>
+
+<script>
+  const translations = {
+    en: {
+      title: "Sustainability Through the Ages",
+      intro: "Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.",
+
+      t1_title: "Intel Founded",
+      t1_desc: "Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.",
+
+      t2_title: "First Microprocessor",
+      t2_desc: "Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.",
+
+      t3_title: "8086 Processor",
+      t3_desc: "Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.",
+
+      t4_title: "386 Processor",
+      t4_desc: "Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers.",
+
+      t5_title: "Peak GHG Emissions",
+      t5_desc: "This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.",
+
+      t6_title: "RISE Strategy",
+      t6_desc: "Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.",
+
+      t7_title: "Net-Zero By 2040",
+      t7_desc: "Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040.",
+
+      t8_title: "Renewable Electricity",
+      t8_desc: "The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions.",
+
+      t9_title: "Sustainability Summit",
+      t9_desc: "Intel hosts its first Sustainability Summit, uniting suppliers and industry leaders to collaborate on sustainable semiconductor manufacturing."
+    },
+
+    es: {
+      title: "Sostenibilidad a Través del Tiempo",
+      intro: "Explora el recorrido de Intel a través del tiempo y descubre cómo nuestro compromiso con la innovación ha creado un futuro más sostenible para la tecnología y el planeta.",
+
+      t1_title: "Fundación de Intel",
+      t1_desc: "Robert Noyce y Gordon Moore renombraron la empresa NM Electronics como Intel Corporation.",
+
+      t2_title: "Primer Microprocesador",
+      t2_desc: "Intel presenta el 4004, el primer microprocesador comercial del mundo.",
+
+      t3_title: "Procesador 8086",
+      t3_desc: "Lanzamiento del procesador 8086, estableciendo la arquitectura x86.",
+
+      t4_title: "Procesador 386",
+      t4_desc: "Intel introduce el procesador 386 con arquitectura de 32 bits.",
+
+      t5_title: "Emisiones Máximas de GEI",
+      t5_desc: "Este año marca las emisiones más altas de Intel, seguido de inversiones en sostenibilidad.",
+
+      t6_title: "Estrategia RISE",
+      t6_desc: "Intel lanza su estrategia RISE enfocada en sostenibilidad e inclusión.",
+
+      t7_title: "Cero Neto para 2040",
+      t7_desc: "Intel se compromete a emisiones netas cero para 2040.",
+
+      t8_title: "Electricidad Renovable",
+      t8_desc: "Intel alcanza 99% de electricidad renovable a nivel global.",
+
+      t9_title: "Seminario de Sostenibilidad",
+      t9_desc: "Intel organiza su primer seminario global de sostenibilidad."
+    }
+  };
+
+  document.getElementById("language-select").addEventListener("change", function () {
+    const lang = this.value;
+
+    // Header
+    document.getElementById("title").textContent = translations[lang].title;
+    document.getElementById("intro").textContent = translations[lang].intro;
+
+    // Timeline cards (ALL 9 NOW WORK)
+    for (let i = 1; i <= 9; i++) {
+      const title = document.getElementById(`t${i}-title`);
+      const desc = document.getElementById(`t${i}-desc`);
+
+      if (title) title.textContent = translations[lang][`t${i}_title`];
+      if (desc) desc.textContent = translations[lang][`t${i}_desc`];
+    }
+
+    document.documentElement.lang = lang;
+  });
+
+  document.getElementById("language-select").addEventListener("change", function () {
+    const lang = this.value;
+
+    // update text
+    document.getElementById("title").textContent = translations[lang].title;
+    document.getElementById("intro").textContent = translations[lang].intro;
+
+    for (let i = 1; i <= 9; i++) {
+      const title = document.getElementById(`t${i}-title`);
+      const desc = document.getElementById(`t${i}-desc`);
+
+      if (title) title.textContent = translations[lang][`t${i}_title`];
+      if (desc) desc.textContent = translations[lang][`t${i}_desc`];
+    }
+
+    // language attribute
+    document.documentElement.lang = lang;
+
+    // RTL support (ONLY if needed)
+    const rtlLanguages = ["ar", "he", "ur"];
+
+    if (rtlLanguages.includes(lang)) {
+      document.documentElement.setAttribute("dir", "rtl");
+      document.body.classList.add("rtl");
+    } else {
+      document.documentElement.setAttribute("dir", "ltr");
+      document.body.classList.remove("rtl");
+    }
+  });
+</script>
+
+<script>
+  // Show popup on load
+  window.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("lang-popup");
+    const closeBtn = document.getElementById("close-popup");
+
+    // Auto-hide after 6 seconds
+    const timer = setTimeout(() => {
+      popup.style.display = "none";
+    }, 6000);
+
+    // Close manually
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+      clearTimeout(timer);
+    });
+  });
+</script>
+
+<script>
+  const modalData = {
+    1: "Intel founded in 1968 by Robert Noyce and Gordon Moore. This marked the beginning of modern semiconductor innovation.",
+    2: "In 1971, Intel released the 4004, the first commercial microprocessor, changing computing forever.",
+    3: "The 8086 processor introduced the x86 architecture used in most PCs today.",
+    4: "The 386 processor brought 32-bit computing and major performance improvements.",
+    5: "2006 marked Intel’s peak emissions before major sustainability reforms.",
+    6: "RISE strategy focuses on Responsible, Inclusive, Sustainable, and Enabling innovation.",
+    7: "Intel committed to net-zero emissions by 2040 across global operations.",
+    8: "Intel reached 99% renewable electricity usage worldwide.",
+    9: "The Sustainability Summit brings global leaders together to drive green innovation."
+  };
+
+  function openModal(id) {
+    document.getElementById("modalTitle").textContent = "Timeline Insight";
+    document.getElementById("modalBody").textContent = modalData[id];
+  }
+</script>
+
+<div class="modal fade" id="timelineModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body" id="modalBody">
+        Loading...
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
 </body>
 
 </html>
