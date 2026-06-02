@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <!-- Header / Hero Section -->
@@ -16,17 +18,33 @@
     <div>
       <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
       <img src="img/intel-header-logo.svg" style="width: 70px; height: 50px;" alt="Intel Logo" />
+
+      <!-- Language Selector -->
+      <nav aria-label="Language selector">
+
+        <select id="language-select">
+
+          <div id="lang-popup" class="lang-popup">
+            🌐 Use this to change language
+            <button id="close-popup">✕</button>
+          </div>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
+      </nav>
+
+
       <!-- Main Heading -->
-      <h1 style="font-size: 50px;">
-        Sustainability 
+      <h1 id="title" style="font-size: 50px;">
+        Sustainability
         <br> Through the Ages
       </h1>
       <div class="divider"></div>
 
       <!-- Subheading / Description -->
-      <p style="font-size: 20px;">
+      <p id="intro" style="font-size: 20px;">
         Explore Intel's journey through time, discovering how our commitment
-        to innovation has shaped a more sustainable future for technology 
+        to innovation has shaped a more sustainable future for technology
         and our planet.
       </p>
     </div>
@@ -38,10 +56,10 @@
     <!-- Card 1: 1968 -->
     <article class="timeline-item" tabindex="0">
       <h2>1968</h2>
-      <h3>Intel Founded</h3>
-      <p>
-        Robert Noyce and Gordon Moore rename the newly formed company 
-        NM Electronics to Intel Corporation, laying the foundation for 
+      <h3 id="t1-title">Intel Founded</h3>
+      <p id="t1-desc">
+        Robert Noyce and Gordon Moore rename the newly formed company
+        NM Electronics to Intel Corporation, laying the foundation for
         decades of technological innovation.
       </p>
       <img src="img/1.jpg" alt="Intel 1968" />
@@ -50,10 +68,10 @@
     <!-- Card 2: 1971 -->
     <article class="timeline-item" tabindex="0">
       <h2>1971</h2>
-      <h3>First Microprocessor</h3>
-      <p>
-        Intel debuts the 4004, the world's first commercial microprocessor, 
-        igniting the microprocessor revolution and propelling the future 
+      <h3 id="t2-title">First Microprocessor</h3>
+      <p id="t2-desc">
+        Intel debuts the 4004, the world's first commercial microprocessor,
+        igniting the microprocessor revolution and propelling the future
         of computing devices.
       </p>
       <img src="img/2.jpg" alt="Intel 1971" />
@@ -62,9 +80,9 @@
     <!-- Card 3: 1978 -->
     <article class="timeline-item" tabindex="0">
       <h2>1978</h2>
-      <h3>8086 Processor</h3>
-      <p>
-        Launch of the 8086 processor, establishing the x86 architecture 
+      <h3 id="t3-title">8086 Processor</h3>
+      <p id="t3-desc">
+        Launch of the 8086 processor, establishing the x86 architecture
         that drives countless PCs and servers in the modern era.
       </p>
       <img src="img/3.jpg" alt="Intel 1978" />
@@ -73,10 +91,10 @@
     <!-- Card 4: 1985 -->
     <article class="timeline-item" tabindex="0">
       <h2>1985</h2>
-      <h3>386 Processor</h3>
-      <p>
-        Intel introduces the 386 processor with 32-bit architecture, 
-        ushering in a new era of performance and multitasking for 
+      <h3 id="t4-title">386 Processor</h3>
+      <p id="t4-desc">
+        Intel introduces the 386 processor with 32-bit architecture,
+        ushering in a new era of performance and multitasking for
         personal computers.
       </p>
       <img src="img/4.jpg" alt="Intel 1985" />
@@ -85,23 +103,23 @@
     <!-- Card 5: 2006 -->
     <article class="timeline-item" tabindex="0">
       <h2>2006</h2>
-      <h3>Peak GHG Emissions</h3>
-      <p>
-        This year marks Intel's highest annual greenhouse gas emissions 
-        for operations. Over subsequent years, Intel invests heavily in 
-        chemical abatement, renewable energy, and energy-efficient 
+      <h3 id="t5-title">Peak GHG Emissions</h3>
+      <p id="t5-desc">
+        This year marks Intel's highest annual greenhouse gas emissions
+        for operations. Over subsequent years, Intel invests heavily in
+        chemical abatement, renewable energy, and energy-efficient
         manufacturing to reverse this trend.
       </p>
-      <img src="img/5.jpg"  alt="Intel 2006" />
+      <img src="img/5.jpg" alt="Intel 2006" />
     </article>
 
     <!-- Card 6: 2020 -->
     <article class="timeline-item" tabindex="0">
       <h2>2020</h2>
-      <h3>RISE Strategy</h3>
-      <p>
-        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
+      <h3 id="t6-title">RISE Strategy</h3>
+      <p id="t6-desc">
+        Intel launches its RISE (Responsible, Inclusive, Sustainable,
+        Enabling) strategy and 2030 goals, aiming to drive industry-wide
         progress on climate action, water stewardship, and waste reduction.
       </p>
       <img src="img/11.jpg" alt="Intel 2020" />
@@ -110,55 +128,131 @@
     <!-- Card 7: 2022 -->
     <article class="timeline-item" tabindex="0">
       <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <p>
-        Intel announces its commitment to achieve net-zero greenhouse 
-        gas emissions (Scope 1 and 2) across its global operations 
+      <h3 id="t7-title">Net-Zero By 2040</h3>
+      <p id="t7-desc">
+        Intel announces its commitment to achieve net-zero greenhouse
+        gas emissions (Scope 1 and 2) across its global operations
         by 2040, building on years of environmental initiatives.
       </p>
-      <img src="img/7.png"  alt="Intel 2022" />
+      <img src="img/7.png" alt="Intel 2022" />
     </article>
 
     <!-- Card 8: 2023 -->
     <article class="timeline-item" tabindex="0">
       <h2>2023</h2>
-      <h3>Renewable Electricity</h3>
-      <p>
-        The company achieves 99% renewable electricity usage worldwide, 
-        helping to drastically lower carbon emissions and driving progress 
+      <h3 id="t8-title">Renewable Electricity</h3>
+      <p id="t8-desc">
+        The company achieves 99% renewable electricity usage worldwide,
+        helping to drastically lower carbon emissions and driving progress
         toward Intel's long-term sustainability goals.
       </p>
-      <img src="img/8.png"  alt="Intel 2023" />
+      <img src="img/8.png" alt="Intel 2023" />
     </article>
 
     <!-- Card 9: 2024 -->
     <article class="timeline-item" tabindex="0">
       <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <p>
-        Intel hosts its first Sustainability Summit, uniting suppliers, 
-        government officials, and industry leaders to collaborate on 
+      <h3 id="t9-title">Sustainability Summit</h3>
+      <p id="t9-desc">
+        Intel hosts its first Sustainability Summit, uniting suppliers,
+        government officials, and industry leaders to collaborate on
         next-generation sustainable semiconductor manufacturing.
       </p>
-      <img src="img/9.png"  alt="Intel 2024" />
+      <img src="img/9.png" alt="Intel 2024" />
     </article>
   </section>
   <p>Scroll to view timeline | Hover over cards to learn more!</p>
 
-  <footer class="site-footer">
-  <div class="subscribe-container">
-    <form class="subscribe-form" aria-label="Email subscription form">
-      <label for="email">Subscribe for updates</label>
-      <input 
-        type="email" 
-        id="email" 
-        name="email" 
-        placeholder="Enter your email"
-        required
-      />
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
-</footer>
+  <script>
+    const translations = {
+      en: {
+        title: "Sustainability Through the Ages",
+        intro: "Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.",
+
+        t1_title: "Intel Founded",
+        t1_desc: "Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.",
+
+        t2_title: "First Microprocessor",
+        t2_desc: "Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.",
+
+        t3_title: "8086 Processor",
+        t3_desc: "Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.",
+
+        t4_title: "386 Processor",
+        t4_desc: "Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers.",
+
+        t5_title: "Peak GHG Emissions",
+        t5_desc: "This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.",
+
+        t6_title: "RISE Strategy",
+        t6_desc: "Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.",
+
+        t7_title: "Net-Zero By 2040",
+        t7_desc: "Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040.",
+
+        t8_title: "Renewable Electricity",
+        t8_desc: "The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions.",
+
+        t9_title: "Sustainability Summit",
+        t9_desc: "Intel hosts its first Sustainability Summit, uniting suppliers and industry leaders to collaborate on sustainable semiconductor manufacturing."
+      },
+
+      es: {
+        title: "Sostenibilidad a Través del Tiempo",
+        intro: "Explora el recorrido de Intel a través del tiempo y descubre cómo nuestro compromiso con la innovación ha creado un futuro más sostenible para la tecnología y el planeta.",
+
+        t1_title: "Fundación de Intel",
+        t1_desc: "Robert Noyce y Gordon Moore renombraron la empresa NM Electronics como Intel Corporation.",
+
+        t2_title: "Primer Microprocesador",
+        t2_desc: "Intel presenta el 4004, el primer microprocesador comercial del mundo.",
+
+        t3_title: "Procesador 8086",
+        t3_desc: "Lanzamiento del procesador 8086, estableciendo la arquitectura x86.",
+
+        t4_title: "Procesador 386",
+        t4_desc: "Intel introduce el procesador 386 con arquitectura de 32 bits.",
+
+        t5_title: "Emisiones Máximas de GEI",
+        t5_desc: "Este año marca las emisiones más altas de Intel, seguido de inversiones en sostenibilidad.",
+
+        t6_title: "Estrategia RISE",
+        t6_desc: "Intel lanza su estrategia RISE enfocada en sostenibilidad e inclusión.",
+
+        t7_title: "Cero Neto para 2040",
+        t7_desc: "Intel se compromete a emisiones netas cero para 2040.",
+
+        t8_title: "Electricidad Renovable",
+        t8_desc: "Intel alcanza 99% de electricidad renovable a nivel global.",
+
+        t9_title: "Seminario de Sostenibilidad",
+        t9_desc: "Intel organiza su primer seminario global de sostenibilidad."
+      }
+    };
+
+    document.getElementById("language-select").addEventListener("change", function () {
+      const lang = this.value;
+
+      // Header
+      document.getElementById("title").textContent = translations[lang].title;
+      document.getElementById("intro").textContent = translations[lang].intro;
+
+      // Timeline cards (ALL 9 NOW WORK)
+      for (let i = 1; i <= 9; i++) {
+        const title = document.getElementById(`t${i}-title`);
+        const desc = document.getElementById(`t${i}-desc`);
+
+        if (title) title.textContent = translations[lang][`t${i}_title`];
+        if (desc) desc.textContent = translations[lang][`t${i}_desc`];
+      }
+
+      document.documentElement.lang = lang;
+    });
+  </script>
+
 </body>
+
+</html>
+</body>
+
 </html>
