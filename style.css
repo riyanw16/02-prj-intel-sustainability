@@ -162,3 +162,44 @@ header p{max-width:60ch;margin:0;color:#ffffff}
 /* Small helper text */
 p{padding:0 1rem 2rem 1rem;color:#444}
 
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #0f0f0f;
+  padding: 12px 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  border-top: 1px solid #333;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.subscribe-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  min-width: 220px;
+}
+
+.subscribe-form button {
+  padding: 10px 16px;
+  border: none;
+  background: #0071e3; /* Intel-style blue vibe */
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.subscribe-form button:hover {
+  background: #005bb5;
+}
+
